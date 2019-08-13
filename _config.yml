@@ -21,3 +21,4 @@ defaults:
   - values:
       layout: "default"
 timezone: Asia/Ho_Chi_Minh
+future: true

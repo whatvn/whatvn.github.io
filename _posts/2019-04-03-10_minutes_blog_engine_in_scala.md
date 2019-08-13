@@ -1,6 +1,6 @@
 ---
 title: 10 minutes, less than 100 lines of scala, implement your own blog engine  
-date: 2019-04-03 11:00:00 
+date: 2018-04-03 11:00:00 
 ---
 
 This post inspired by [Li Haoyi's post](http://www.lihaoyi.com/post/ScalaScriptingandthe15MinuteBlogEngine.html), where he explains how to create a blog engine in [Scala Script](http://www.lihaoyi.com/Ammonite/#ScalaScripts) in 15 minutes. 
