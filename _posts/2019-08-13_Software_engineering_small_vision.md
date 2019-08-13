@@ -1,6 +1,6 @@
 ---
 title: Small mind on software engineering
-date: 2018-08-13 12:00:00
+date: 2019-08-13 12:00:00
 ---
 
 Recently an old trend is woken up in our country - Social network for Vietnamese. The trend is initialised by our [Minister of Information and Communications](https://vnexpress.net/kinh-doanh/ong-nguyen-manh-hung-nen-lam-mang-xa-hoi-cong-cu-tim-kiem-thay-facebook-google-3952971.html). It's funny that after years trying to do the same thing again and again and we must admit that building a local social network is a wrong way, and we stil do it again. 
