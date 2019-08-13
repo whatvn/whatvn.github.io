@@ -48,5 +48,5 @@ When using opensource software, we downloaded from github, follow step by step i
 
 When planning for new feature or new product, instead of sitting down together, making dicusssion to findout the solution, we always try to find an example: what did Facebook do, what did Netflix do... and try to make a copy of public solution, with not enough knowledge and experience. 
 
-We can not go big because at the end, our product is maked up by thousands of POC, plenty of problems cannot be solved. 
+We can not go big because at the end, our product is made up by thousands of POC, plenty of problems cannot be solved. 
 
