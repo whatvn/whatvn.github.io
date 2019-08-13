@@ -27,7 +27,6 @@ So the question is why? Why we developed a social network, with thousands of com
 
 We developed software only for our product, a software will stick with many other softwares, and all of its dependencies stick to other dependencies, which also developed for our product, it's not designed to be common-used, and not designed to be opensourced. 
 
-![when trend spreaded](images/small_mind.png)  
 
 Saying something on Facebook is super easy, actually doing something you've said on Facebook is another story. 
 A social network which had 10 millions of user is going to be opensourced is a great story, but the question is how can you opensource it? and how people can actually use it. 
