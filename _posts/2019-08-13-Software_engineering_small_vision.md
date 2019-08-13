@@ -3,7 +3,7 @@ title: Small mind on software engineering
 date: 2018-04-03 11:00:00 
 ---
 
-Recently an old trend is woken up in our country - Social network for Vietnamese. The trend is initialised by our [Minister of Information and Communications](https://vnexpress.net/kinh-doanh/ong-nguyen-manh-hung-nen-lam-mang-xa-hoi-cong-cu-tim-kiem-thay-facebook-google-3952971.html). It's funny that after years trying to do the same thing again and again and we must admit that building a local social network is a wrong way, and we still do it again. 
+Recently an old trend brought up in our country - Social network for Vietnamese. The trend is initialised by our [Minister of Information and Communications](https://vnexpress.net/kinh-doanh/ong-nguyen-manh-hung-nen-lam-mang-xa-hoi-cong-cu-tim-kiem-thay-facebook-google-3952971.html). It's funny that after years trying to do the same thing again and again and we must admit that building a local social network is a wrong way, and we still do it again. 
 
 It's not only funny but also a waste of time and resource, follow a wrong trend, many local company will restart old project and put software engineers in to that project, on a dream to build thing users never expect to use. 
 
