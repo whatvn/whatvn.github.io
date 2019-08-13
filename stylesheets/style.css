@@ -9,6 +9,13 @@
 /* .link:hover { background: url(/images/line.png) repeat-x left bottom; } */
 
 /* Markdown styles */
+.markdown-body {
+  font-size: 16px;
+
+  font-family: 'Merriweather', monospace;
+  text-decoration: none;
+  color: #000000;
+}
 .markdown-body a {
   font-size: 16px;
 
