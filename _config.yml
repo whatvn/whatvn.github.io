@@ -4,7 +4,7 @@ description:      "blog"
 url:              https://lazyval.com # Site url, without a slash at the end.
 signoff:          "hung" # Your name
 facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.
-google_analytics: # Set tracking, remove from /javascripts/basic.js if unwanted.
+google_analytics: UA-145889271-1
 share:            false # Turn on twitter and facebook share buttons
 
 links:
