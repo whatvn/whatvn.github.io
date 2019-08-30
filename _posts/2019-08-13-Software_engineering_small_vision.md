@@ -13,7 +13,7 @@ The pioneer:
 - http://vivavietnam.vn/
 - many to come
 
-While the world changes every seconds, trying to invent, adapt, learn, master and build new thing, we go back to the old day, build the old thing. Actually we will not build it, we will copy from the other, in this case - Facebook. History proves only Chinese can do that, their local market is big enough to fight again global market, while our products expect millions of user, they already have billion of internet user, ready to use new product if it's interesting enough. 
+While the world changes every second, trying to invent, adapt, learn, master and build new thing, we go back to the old day, build the old thing. Actually we will not build it, we will copy from the other, in this case - Facebook. History proves only Chinese can do that, their local market is big enough to fight again global market, while our products expect millions of user, they already have billion of internet user, ready to use new product if it's interesting enough. 
 
 > The definition of insanity is doing the same thing over and over again and expecting a different result
 
