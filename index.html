@@ -7,6 +7,7 @@
       <time class="fr silver ttu">{{ post.date | date_to_string }} </time>
       {{ post.title }}
     </a>
+    {{ post.content | strip_html | truncatewords: 50 }}
   </li>
   {% endfor %}
 </ul>
