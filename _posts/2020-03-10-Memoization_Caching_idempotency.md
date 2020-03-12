@@ -168,7 +168,7 @@ The pattern here is yet simple to apply, it's similar to how caching is implemen
 
 The important thing we should take care of is: we should not change business code when apply this pattern, know what to change and what to keep. 
 
-Most developers choose the first way, even more and more abstraction into source code, do not care about what language/framework already support, adding more code to current implementation: 
+Most developers choose the first way, even add more and more abstractions into source code, do not care about what language/framework already support, adding more code to current implementation: 
 
 
 ```java
