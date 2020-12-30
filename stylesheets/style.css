@@ -69,6 +69,11 @@
   border: 0;
   border-bottom: 1px dotted #CCC;
 }
+.markdown-body h1 {
+    font-size: 18pt;
+    font-weight: 900;
+}
+
 .markdown-body blockquote {
   /* font-family: 'Lucida Sans Unicode',  'Palatino'; */
   text-rendering: optimizeLegibility;
@@ -79,9 +84,9 @@
 }
 
 code,tt,pre,pre>p {
-line-height: 120%;
-font-family: monospace;
-font-size: 11pt;
+  line-height: 120%;
+  font-family: monospace;
+  font-size: 11pt;
 }
 .center-image
 {
@@ -95,8 +100,4 @@ font-size: 11pt;
   height: 80%;
 }
 
-.markdown-body h1 {
-  font-size: 13pt;
-  margin: .67em 0;
-}
 /* end Markdown styles */
