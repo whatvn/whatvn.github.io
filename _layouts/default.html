@@ -15,7 +15,7 @@
     <br>
     <div class="mw8 bg-white center br2-ns">
         {% if page.title == null %}
-        <div id="joke" class="lh-title f5 mw5 mw7-ns pa3 ph5-ns">
+        <div id="joke" class="joke lh-title f5 mw5 mw7-ns pa3 ph5-ns">
           <script>
             var jokeSize = {{ site.jokes.values.size }} ;
             var jokes = {{ site.jokes.values | jsonify }} ;
