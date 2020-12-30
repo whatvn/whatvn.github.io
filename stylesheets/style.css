@@ -22,11 +22,10 @@
 .markdown-body {
   font-size: 13pt;
   line-height: 150%;
-
+  hyphens: auto;
   font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-  text-rendering: optimizeLegibility;
-  text-decoration: none;
-  color: #020501;
+  color: #222222;
+  font-weight: 400;
 }
 .markdown-body a {
   font-size: 13pt;
@@ -71,15 +70,19 @@
   border-bottom: 1px dotted #CCC;
 }
 .markdown-body blockquote {
-  font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   /* font-family: 'Lucida Sans Unicode',  'Palatino'; */
   text-rendering: optimizeLegibility;
 
   background: #f9f9f9;
   border-left: .2rem solid #ccc;
-  padding-left: 3.8rem;
+  padding-left: 0.8rem;
 }
 
+code,tt,pre,pre>p {
+line-height: 120%;
+font-family: monospace;
+font-size: 11pt;
+}
 .center-image
 {
     margin: 0 auto;
