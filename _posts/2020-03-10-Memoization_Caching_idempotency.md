@@ -122,10 +122,11 @@ According to previous example, if we provide an API the bank to send notificatio
 **Response**
   - Format: json contains total point of user after point is added 
   - Example:
+  
 ```json
 {
     "point": 10,
-    "userId": "2325345"
+    "userId": "9345"
 }
 ```
 

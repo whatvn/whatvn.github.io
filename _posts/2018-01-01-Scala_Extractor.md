@@ -3,7 +3,7 @@ title: Scala Basic - Extractor
 date: 2018-01-03 03:00:00
 ---
 
-```
+```scala
 package extractor
 
 object RegexExtractor {
@@ -28,7 +28,7 @@ Mặc dù **case class** vô cùng hữu dụng, tuy nhiên sử dụng `case cl
 
 Chú ý việc sử dụng **case class** tương ứng với việc chúng ta define class với public field, với scala thì các public field này là immutable. Cách biểu diễn dữ liệu (data representation) và triển khai dữ liệu (data implementation) không độc lập. Xem qua ví dụ bên dưới:
 
-```
+```scala
 abstract class BaseVideo
 object Video  {
 	private class VideoImpl(val id: long, val metadata: VideoMetadata) extends BaseVideo
@@ -45,7 +45,7 @@ val video = Video(142424434l, someMetadata)
 
 Khi cần thay đổi cách xây dựng `Video` type, chúng ta chỉ cần thay đổi mã nguồn của thư viện, và client không cần biết đến sự thay đổi này, và cũng không cần phải sửa đổi mã nguồn để có thể làm việc với thư viện mới
 
-```
+```scala
 abstract class BaseVideo
 
 object Video  {
@@ -61,7 +61,7 @@ object Video  {
 
 **case class** chỉ có thể làm việc với constructed object, có nghĩa là chúng ta chỉ có thể áp dụng pattern matching dối với những object đã được định nghĩa với type cụ thể nào đó: 
 
-```
+```scala
 abstract class X
 
 case class Y(y: String) extends X
@@ -81,7 +81,7 @@ Hiểu một cách đơn giản, các method trên là **đảo ngược của c
 
 ## unapply method
 
-```
+```scala
 object URL {
   def unapply(url: String): Option[(String, String)] = {
     val parts = url.split("_")
@@ -108,7 +108,7 @@ Khi một object được khai báo với `unapply` method, object đó trở th
 
 Trường hợp **unapply** trả về **Boolean**, scala cho phép gọi extractor với `zero parameter` sử dụng [variable binding](http://www.scala-lang.org/files/archive/spec/2.11/08-pattern-matching.html#variable-patterns), syntax này không trong sáng cho lắm, khó hình dung và rối rắm:
 
-```
+```scala
 object NewVideo {
 	def unapply(id: String): Boolean = {
 		id.toInt > 200000
@@ -118,7 +118,7 @@ object NewVideo {
 
 Ví dụ trên chúng ta định nghĩa một object `NewVideo` với `unapply` method để kiểm tra xem video có lơn hơn *200000* hay không, để ý return type của method này là **Boolean**, kết hợp với ví dụ trước đó, ta sử dụng `NewVideo` extractor như sau: 
 
-```
+```scala
  def extract(url: String) = url match {
       case URL(id @ NewVideo() , name) => println(id)
       case _ => println("nothing")
@@ -144,7 +144,7 @@ http://vnexpress.net/tin-tuc/quoc-te/dong-tien-trung-quoc-co-the-bien-dong-manh-
 ```
 Để kiểm tra một tin thuộc thể loại nào, nằm trong chuyên mục con nào... với các dạng url có vẻ đa dạng, **unapply** không thể áp dụng. 
 
-```
+```scala
 object News {
   def unapplySeq(fullURL: String): Option[Seq[String]] = {
      Some(fullURL.split("/"))
@@ -169,7 +169,7 @@ Như vậy nguyên tắc của **unapplySeq** như sau:
 - return type của unapplySeq là **Option[Seq[SomeType]]** hoặc 
 - return type của unapplySeq có thể là **tuple** với số lượng phần tử cố định, như sau: 
 
-```
+```scala
 object News {
   def unapplySeq(fullURL: String): Option[(String, String, Seq[String])] = {
     val parts = fullURL.replace(".html", "").split("/")
@@ -194,7 +194,7 @@ extract(url1) // 3520938 thuoc tin tuc, phan muc quoc te
 
 Cũng ví dụ bên trên, ta có thể áp dụng cùng lúc **unapplySeq** và **unapply**: 
 
-```
+```scala
 object NewsUrl {
   def unapplySeq(fullURL: String): Option[Seq[String]] = {
     Some(fullURL.replace(".html", "").split("/"))
