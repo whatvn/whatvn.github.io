@@ -3,24 +3,27 @@
 .bg-super-white { 
   font-family: 'Lucida Sans Unicode',  'Merriweather', monospace;
   /* font-family: 'Lucida Sans Unicode',  'Palatino'; */
-  font-size: 15pt;
+  font-size: 13pt;
   background: #f9f9f9; 
 }
 .top-50 { top: 50% }
 /* .link:hover { background: url(/images/line.png) repeat-x left bottom; } */
 
-.title { font-size: 15pt;}
+.title { 
+  font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-size: 16pt;
+}
 
 .joke { font-size: 8pt; font-weight: 500;}
 
 .footer-text { font-size: 10px;}
 
 
-.summary { font-size: 15pt; margin-bottom: 14px; border-bottom-width: 1px;}
+.summary { font-size: 13pt; margin-bottom: 14px; border-bottom-width: 1px;}
 /* Markdown styles */
 
 .markdown-body {
-  font-size: 15pt;
+  font-size: 13pt;
   line-height: 150%;
   hyphens: auto;
   font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
@@ -28,7 +31,7 @@
   font-weight: 400;
 }
 .markdown-body a {
-  font-size: 15pt;
+  font-size: 13pt;
 
   font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   text-rendering: optimizeLegibility;
@@ -36,7 +39,7 @@
   color: #357edd;
 }
 .markdown-body .highlighter-rouge {
-  font-size: 15pt;
+  font-size: 13pt;
 
   font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   text-rendering: optimizeLegibility;
@@ -54,7 +57,7 @@
   font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   /* font-family: 'Lucida Sans Unicode',  'Palatino'; */
   text-rendering: optimizeLegibility;
-  font-size: 15pt;
+  font-size: 13pt;
 
   padding: .5rem 1rem;
   margin: 0 ;
@@ -63,7 +66,7 @@
   font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   /* font-family: 'Lucida Sans Unicode',  'Palatino'; */
   text-rendering: optimizeLegibility;
-  font-size: 15pt;
+  font-size: 13pt;
 
   margin: 2em -4rem;
   border: 0;
@@ -98,6 +101,13 @@ code,tt,pre,pre>p {
 {
   width: 50%;
   height: 80%;
+}
+
+.body {
+  margin-left: auto;
+    margin-right: auto;
+    hyphens: auto;
+  max-width: 8in;
 }
 
 /* end Markdown styles */
