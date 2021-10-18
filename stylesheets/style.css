@@ -3,7 +3,7 @@
 .bg-super-white { 
   font-family: 'Lucida Sans Unicode',  'Merriweather', monospace;
   /* font-family: 'Lucida Sans Unicode',  'Palatino'; */
-  font-size: 13pt;
+  font-size: 12pt;
   background: #f9f9f9; 
 }
 .top-50 { top: 50% }
@@ -19,34 +19,34 @@
 .footer-text { font-size: 10px;}
 
 
-.summary { font-size: 13pt; margin-bottom: 14px; border-bottom-width: 1px;}
+.summary { font-size: 12pt; margin-bottom: 14px; border-bottom-width: 1px;}
 /* Markdown styles */
 
 .markdown-body {
-  font-size: 13pt;
+  font-size: 12pt;
   line-height: 150%;
   hyphens: auto;
-  font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-family: Avenir, et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   color: #222222;
   font-weight: 400;
 }
 .markdown-body a {
-  font-size: 13pt;
+  font-size: 12pt;
 
-  font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-family: Avenir, et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   text-rendering: optimizeLegibility;
   text-decoration: none;
   color: #357edd;
 }
 .markdown-body .highlighter-rouge {
-  font-size: 13pt;
+  font-size: 12pt;
 
-  font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-family: Avenir, et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   text-rendering: optimizeLegibility;
   /* padding: .25rem .5rem; */
 }
 .markdown-body pre {
-  font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-family: Avenir, et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   text-rendering: optimizeLegibility;
 
   /* margin: 0; */
@@ -54,19 +54,19 @@
 }
 .markdown-body > .highlighter-rouge,
 .markdown-body > blockquote {
-  font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-family: Avenir, et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   /* font-family: 'Lucida Sans Unicode',  'Palatino'; */
   text-rendering: optimizeLegibility;
-  font-size: 13pt;
+  font-size: 12pt;
 
   padding: .5rem 1rem;
   margin: 0 ;
 }
 .markdown-body > hr {
-  font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-family: Avenir, et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   /* font-family: 'Lucida Sans Unicode',  'Palatino'; */
   text-rendering: optimizeLegibility;
-  font-size: 13pt;
+  font-size: 12pt;
 
   margin: 2em -4rem;
   border: 0;
