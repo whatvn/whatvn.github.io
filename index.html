@@ -1,13 +1,32 @@
 ---
 ---
+<div>
+  <img src="images/ava.jpg" alt="ava" width="100%" align="center"></img>
+  <p>
+    I am a computer Engineer, father of an awesome son, husband of strange and great wife.
+
+    After spending years doing engineering at some companies I had decided to stop and tried to do my own thing, that's why I was also a founder of start-up technology company where we developed a new platform for video delivery using P2P technology called PCDN.IO, but it <b>fail</b>. So currently I am Head of engineering for an online payment product. My job is managing day to day task of our funny teams, a bit of coding, doing some code review and debate all day long.
+
+    <p>
+    This blog is where my interesting (and sometimes hated) things will be noted.
+</p>
+
+    You can find me on <a href="https://github.com/whatvn"> GitHub</a>  or <a href="https://twitter.com/whatvn"> Twitter</a>  or <a href="https://vn.linkedin.com/in/hungnv"> Linkedin </a>.
+
+  </p>
+
+</div>
+
+---
+---
+<h3>Posts</h3>
 <ul class="list pa0">
   {% for post in site.posts %}
-  <li class="mv2">
-    <a href="{{ site.url }}{{ post.url }}" class="db pv1 link blue hover-mid-gray">
+  <li class="mv1">&raquo;
+    <a href="{{ site.url }}{{ post.url }}" class="posts hover-mid-gray blue">
       <b class="title">{{ post.title }}</b>
     </a>
-    <time class="silver">{{ post.date | date_to_string }} </time>
-    <li class="summary"> {{ post.content | strip_html | truncatewords: 100 }} </li>
+    <span class="timestamp">{{ post.date | date_to_string }}</span>
   </li>
   {% endfor %}
 </ul>

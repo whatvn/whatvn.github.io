@@ -11,10 +11,10 @@
 
 .title { 
   font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-  font-size: 16pt;
+  font-size: 12pt;
+  color: #a00;
+  font-weight: bold;
 }
-
-.joke { font-size: 8pt; font-weight: 500;}
 
 .footer-text { font-size: 10px;}
 
@@ -101,6 +101,27 @@ code,tt,pre,pre>p {
 {
   width: 50%;
   height: 80%;
+}
+
+.post-link {
+  margin-left: 0.5ex;
+}
+
+.timestamp {
+  float: right;
+  color: #aaa;
+  font-size: small;
+}
+
+.page-title {
+  color: #a00;
+  font-weight: bold;
+  /*margin-bottom: 2em;*/
+}
+
+#post {
+
+
 }
 
 .body {

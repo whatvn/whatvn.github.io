@@ -7,23 +7,14 @@ signoff:          "Hung"
 google_analytics: UA-145889271-1
 share:            false 
 
-jokes:
-  values:
-    - Writing software as if we are the only person that ever has to comprehend it is one of the biggest mistakes and false assumptions that can be made. - Karolina Szczur
-    - Sometimes it's better to leave something alone, to pause, and that's very true of programming. - Joyce Wheeler
-    - So much complexity in software comes from trying to make one thing do two things. — Ryan Singer
-    - The trick is to fix the problem you have, rather than the problem you want. - Bram Cohen
-    - A cache with a bad policy is another name for a memory leak. – Rico Mariani
-    - The function of good software is to make the complex appear to be simple. — Grady Booch
-    - The truth is, nearly every attempt to design a hierarchy-free, "flat" control system just moves the central control around until you can't see it anymore - apenwarr
-    
+
 links:
-  - name:         Posts
+  - name:         "&raquo; Hung &laquo;"
     url:          /
     external:     false
-  - name:         About
-    url:          /about
-    external:     false
+#  - name:         About
+#    url:          /about
+#    external:     false
 # ------------ CONFIGURABLE END ------------
 
 permalink:        /posts/:title
