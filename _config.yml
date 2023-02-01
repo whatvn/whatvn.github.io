@@ -1,11 +1,11 @@
 # ----------- CONFIGURABLE START -----------
 title:            "Hung"
 description:      "blog"
-url:              https://lazyval.com 
-signoff:          "Hung" 
-# facebook_appid:   
+url:              https://lazyval.com
+signoff:          "Hung"
+# facebook_appid:
 google_analytics: UA-145889271-1
-share:            false 
+share:            false
 
 
 links:
@@ -17,7 +17,7 @@ links:
 #    external:     false
 # ------------ CONFIGURABLE END ------------
 
-permalink:        /posts/:title
+permalink:        /:categories/:title
 defaults:
   - values:
       layout: "default"

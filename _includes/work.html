@@ -1,0 +1,33 @@
+<ul class="posts">
+    <h3>Employment</h3>
+    {% for post in site.categories.work %}
+    &raquo;
+        <span class="postlink">
+         <a href="{{ post.link }}" target="_blank">{{ post.company }}</a>
+       </span>
+        <span class="timestamp">{{ post.dates }}</span>
+        <span class="work-title">{{ post.title }}</span>
+        <div class="work-content">{{ post.content }}</div>
+
+    {% endfor %}
+    <h3>Miscellanea</h3>
+    <div class="work-content">
+    <p><u>Computer Skills</u>:
+        Experienced using, administrating and programming for Linux, Mac OS X, and other UNIX systems. Extensive experience with C, Julia, Matlab, R, Ruby, JRuby, Perl, Hadoop, Cascading, Amazon Web Services, shell scripting, PostgreSQL, Mathematica, LaTeX, GNU Make, and Git. Proficient in Java, C++, Python, Pascal, Tcl, MySQL, XML, XSLT, Apache, JavaScript, ActionScript, HTML, CSS, Subversion, CVS, BitKeeper, and Perforce.
+
+    <p><u>Languages</u>:
+        Fluent in English and Swedish; proficient in German and Latin; basic knowledge of French and Spanish.
+
+    <p><u>Patent</u>:
+        The &ldquo;Fast Failover Algorithm&rdquo; developed at Citrix Online is patented in the United States [<a href="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;p=1&amp;u=%2Fnetahtml%2FPTO%2Fsearch-bool.html&amp;r=16&amp;f=G&amp;l=50&amp;co1=AND&amp;d=PTXT&amp;s1=20110301.PD.&amp;s2=%28FL.ASST.%29&amp;OS=ISD/03/01/2011+AND+AS/FL&amp;RS=ISD/03/01/2011+AND+AS/FL" target="_blank">USPTO Patent 7,898,968</a>].
+
+    <p><u>World Record</u>:
+        Holder of the record for the fastest single-fare per-navigation of the New York City Subway system, riding trains stopping at each of the 468 stations in the system. New record time: 24 hours, 54 minutes, 3 seconds. Previous record: 26 hours, 21 minutes, 8 seconds. Co-holders: Bill Amarosa (Queens), Michael Boyle (Staten Island), Brian Brockmeyer (Brooklyn), Stefan Karpinski (Manhattan), Jason Laska (The Bronx), and Andrew Weir (New Jersey). We all went to high school together and completed the challenge to raise money for the school [<a href="http://rapidtransitchallenge.com/" target="_blank">website</a>].
+
+    <p><u>Erdős Number</u>:
+        At most five: Paul Erdős (0), Vitaly Bergelson (1), Terence Tao (2), Emmanuel Candès (3), John R. Gilbert (4), Stefan Karpinski (5).
+
+    <p><u>Interests</u>:
+        Music, ultimate frisbee, karaoke, bridge, travel, languages, riding the subway.
+    </div>
+</ul>
