@@ -1,6 +1,6 @@
 ---
 company: Ambient Digital Group
-dates:  056/2014-08/2017
+dates:  06/2014-08/2017
 title: System Architect - Manager
 where: Ho Chi Minh City
 link:  https://www.iprospect.com/en/global/news-and-insights/news/iprospect-launches-in-vietnam-through-acquisition-of-ambient-digital-vietnam/

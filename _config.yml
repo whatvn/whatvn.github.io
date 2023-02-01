@@ -9,12 +9,12 @@ share:            false
 
 
 links:
-  - name:         "&raquo; Hung &laquo;"
+  - name:         "&raquo; Hung "
     url:          /
     external:     false
-#  - name:         About
-#    url:          /about
-#    external:     false
+  - name:         "Resume &laquo;"
+    url:          /resume
+    external:     false
 # ------------ CONFIGURABLE END ------------
 
 permalink:        /:categories/:title
