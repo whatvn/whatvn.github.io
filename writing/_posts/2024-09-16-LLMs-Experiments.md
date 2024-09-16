@@ -14,10 +14,10 @@ Also LLMs which support Vietnamese are not main-stream, they are there but mostl
 
 My first experiment with LLM is the project we built during Hackathon last year, apply Retrieval-augmented generation (RAG) with langchain and OpenAI gpt-3 model to build chatbot to help user quickly buy items on our fintech application using natural (Vietnamese) language, we didn't win but that 2 days was fun. I didn't intent to use OpenAI, at first I tried to use different LLM models such as Open Assistant, Llama, etc but again, those were slow and low quality, using OpenAI for 24 hours competition was reasonable at that time. 
 
-A few days ago I decide to try local approach again because maybe after 1 year long and the world out there, they are still working so hard to build many different model with promise to have better precision, faster, easier to use and better quality. The model I choose is Qwen2 - developed by Qwen team, Alibaba Cloud. I choose this model because:
-•	It's opensource and free for commercial use (Apache License) 
-•	It support Vietnamese out-of-the-box 
-•	When getting asked with sensitive question to Vietnamese people, its response is acceptable  
+A few days ago I decide to try local approach again because after 1 year long people are still working so hard to build many different model with promise to have better precision, faster, easier to use and better quality. After some quick research, the model I choose is Qwen2 - developed by Qwen team, Alibaba Cloud. I choose this model because:
+- It's opensource and free for commercial use (Apache License) 
+- It support Vietnamese out-of-the-box 
+- When getting asked with sensitive question to Vietnamese people, its response is acceptable  
 
 Luckily one of my friend is nice enough when I asked to borrow a GPU server to run this experiment, server hardware is as following:
 
@@ -26,10 +26,6 @@ Luckily one of my friend is nice enough when I asked to borrow a GPU server to r
     Ram: 128GB
     GPU: 4 x NVIDIA GeForce RTX 3090 24GB 
 ```
-
-
-
-
 
 ### 1. Use Huggingface transformer to run the model 
 Nowaday most open model are released on Huggingface, a Github like platform for Large language model, they offer free space - a powerful and accessible platform that can greatly simplify the process of sharing, collaborating and testing model hosted on Huggingface.  Qwen2 also published on HuggingFace, getting this model to run locally is simple, just follow general guideline and copy paste code from Transformers document. 
