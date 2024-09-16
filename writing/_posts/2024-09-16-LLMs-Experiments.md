@@ -476,7 +476,7 @@ Other than prompt length, we know that LLM can understand human language, but it
 
 #### 5.1 How to use RAG
 To build a RAG application, basically we will implement 2 steps: 
-- Embedding our latest data into a vector database. In our example, we tokenize our available services and store tokenized data into a database, which later we can search using that database. If you are new into this, this basically building simple search based on semantic instead of regular expression, text similarity, etc. Please take a look at my old blog to have some first knowledge about this topic: A better search 
+- Embedding our latest data into a vector database. In our example, we tokenize our available services and store tokenized data into a database, which later we can search using that database. If you are new into this, this basically building simple search based on semantic instead of regular expression, text similarity, etc. 
 - When building prompt, instead of bundling all data into it, we 1) tokenize user spending history 2) perform a search into vector database to get result 3) use that result as context in prompt query. 
 
 #### 5.2 Re-work our POC 
