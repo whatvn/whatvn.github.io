@@ -9,8 +9,23 @@ Using OpenAI is fast and easy, but it comes with cost and privacy concerns, we h
 
 Also LLMs which support Vietnamese are not main-stream, they are there but mostly finetuned model, I’ve try some but actually there’s no that fit my requirements. 
 
+In this blog post, I will cover my experiment getting 7B model running locally, we then cover how to build application using vLLM, apply RAG, prepare dataset to finetune an LLM model using 2 different approaches. 
 
-## Experiment 
+On the other hand, in real world application I managed to get Vision language and audio model to run along with LLMs to accomplish more complicated task, but that will not be covered this time. 
+
+
+1. [Past Experiment](#pass-experiment)
+2. [Huggingface transformers](#hf-transformers)
+3. [vllm](#vllm)
+4. [LLM application](#llm-application)
+5. [Performance testing](#performance-test)
+5. [RAG](#rag)
+6. [Finetune a model](#finetune)
+7. [Conclusion](#conclusion)
+
+
+
+## Past Experiment <a name="pass-experiment"></a>
 
 My first experiment with LLM is the project we built during Hackathon last year, apply Retrieval-augmented generation (RAG) with langchain and OpenAI gpt-3 model to build chatbot to help user quickly buy items on our fintech application using natural (Vietnamese) language, we didn't win but that 2 days was fun. I didn't intent to use OpenAI, at first I tried to use different LLM models such as Open Assistant, Llama, etc but again, those were slow and low quality, using OpenAI for 24 hours competition was reasonable at that time. 
 
@@ -27,7 +42,7 @@ Luckily one of my friend is nice enough when I asked to borrow a GPU server to r
     GPU: 4 x NVIDIA GeForce RTX 3090 24GB 
 ```
 
-### 1. Use Huggingface transformer to run the model 
+### 1. Use Huggingface transformer to run the model  <a name="hf-transformers"></a>
 Nowaday most open model are released on Huggingface, a Github like platform for Large language model, they offer free space - a powerful and accessible platform that can greatly simplify the process of sharing, collaborating and testing model hosted on Huggingface.  Qwen2 also published on HuggingFace, getting this model to run locally is simple, just follow general guideline and copy paste code from Transformers document. 
 
 I first try with Qwen2-7B-Instruct-GPTQ-Int8, because running bigger model is not possible, available hardware is not powerful, and 7B is big enough to do normal inference
@@ -95,10 +110,34 @@ Here's a funny cat story:
 ....
 ```
 
+With this speed, it will not helpful in most case even if we want to build application for offline usage. Nvidia invents Int4 Precision for AI Inference  which offers additional 59% Speedup Compared to INT8 model. In addition to computational speedups, using INT4 can also reduce a network’s memory footprint and conserve memory bandwidth, which makes it easier to run multiple ensemble networks on a single GPU. Qwen2 also release 7B-Int4 instruct model. Let's give it a try: 
+
+```
+Total processing time  102.43286490440369
+A cat is a small, typically furry, carnivorous mammal. They are often kept as pets due to their affectionate nature and playful behavior. Cats can vary greatly in size, shape, color, and patterns, but they all share certain characteristics that define them as felines:
+1. **Body Structure**: Cats have a slender, agile body that allows them to jump great heights and distances. Their legs are muscular and allow for powerful leaps and quick movements. They also have retractable claws which help with climbing, hunting, and self-defense.
+2. **Appearance**: The appearance of cats can range widely from short-haired breeds like Siamese or Persian cats to long-haired breeds such as Maine Coon or Turkish Van. They often have soft, silky fur that can come in various colors and patterns. Cats usually have large eyes with pupils that can expand widely, giving them excellent night vision.
+3. **Temperament**: Cats are known for their independent nature, often seen lounging or sleeping throughout the day. They can be quite playful and curious, chasing after toys and exploring their surroundings. Some cats are more affectionate than others, seeking out human attention, while some prefer to keep a bit of distance.
+4. **Habits**: Cats are known for their love of scratching, which helps them maintain the health of their claws and mark territory. They also enjoy grooming themselves, spending hours licking their fur to keep it clean and shiny.
+Now, let's tell a funny cat story:
+.....
+```
+
+Time to load and run this model is much faster than Int8,  response time is improved but not really as expectation, it's still 102 seconds for a simple prompt. How about smaller model, example 1.5B parameters:
+
+```
+Total processing time  37.67355823516846
+A cat is a small carnivorous mammal that is commonly kept as an animal of company. Cats are known for their independent nature and can be quite independent and aloof at times.
+Here's a funny cat story:
+....
+```
+
+
+
 Turn out even with small model, improvement on speed is not so different since last year. 
 So how can we improve speed? 
 
-### 2. vLLM 
+### 2. vLLM <a name="vllm"></a>
 When searching around, I happen to read about vLLM which address the same issue we are facing with promising benchmark result as showed bellow: 
 
 ![small mind](/images/vllm.png)
@@ -152,7 +191,7 @@ As for a funny cat story, I'll share one that always brings a smile:
 
 It's 116x faster than Huggingface Transformer, other than that it's easier to use and offer more flexible way to build application 
 
-### 3. Build an application 
+### 3. Build an application <a name="llm-application"></a>
 
 Fintech applications usually have a feature that summarizes user spending and earning based on transaction history. With this information, we can build an application to leverage the API to consume spending's history of user, then recommend user to explore other usecases, example: 
 
@@ -365,7 +404,7 @@ See example recommendation based on my spending history with in August
 
 ```
  
-### 4. Performance test
+### 4. Performance test <a name="performance-test"></a>
 To evaluate performance, we need to do a simple performance benchmark. We will try to increase number of concurrency to to know how fast this methodology is. 
 
 
@@ -457,7 +496,7 @@ Vllm have option to utilize multiple GPUs, since our server has 4 GPU, let give 
 It's much better when using multiple GPU. Next step, we will try to apply RAG to reduce context length. 
 
 
-### 5. RAG 
+### 5. RAG <a name="rag"></a>
 Why applying RAG will reduce context and prompt length? If you take look at our original POC, available services are embedded into user's prompt so we can tell LLM to use these services to recommend user after analyzing user spending history. Imagine if we have hundreds or thousands of service, our prompt will take forever to process. 
 
 To be more detail, with current hardware and 7B model, the best performance we can process is around 200 tokens/s. What does it mean by token/s? A token is a unit that LLM model will process, lets say if our prompt is "Tell me about Lazycat", and we implement a simple tokenization method to split prompt into word array, it will become ["Tell", "me", "about", "Lazycat"], each word in that array is a token. Certainly in real world, they do not use that simple tokenization, tokenize the words into vector presentation will be more effective. If you want to learn more about tokenization, please read Andrej Karpathy project: Minimal, clean code for the Byte Pair Encoding (BPE) algorithm commonly used in LLM tokenization and search Google to teach yourself about BPE, GPT-* tokenizer. 
@@ -630,7 +669,7 @@ Chat response: [
 
 ```
 
-### 6. Fine tune a model 
+### 6. Fine tune a model <a name="finetune"></a>
 We can also finetune LLM model to use for our customized task, or our specific domain or application usecase. Other than that, in case we want to reduce unwanted response, ie sometimes prompt engineering won't work as we expect, fine-tuning may help filter out irrelevant, inappropriate, or unhelpful responses by tailoring the model to exclude certain topics or types of content
 
 In this post, I will present a way to use public data to build dataset and finetune the model.  
@@ -1515,7 +1554,7 @@ Q: "Nạp tiền điện thoại thế nào?"
 Chat response: Để nạp tiền điện thoại vào Zalopay, bạn cần thực hiện các bước sau: Bước 1: Chọn số điện thoại cần nạp Bước 2: Chọn nguồn tiền, xác nhận thanh toán và hoàn tất.
 ```
 
-### 6. Conclusion
+### 6. Conclusion <a name="conclusion"></a>
 Since publishing this blog, I've got some question why using LLM for recommendation task as it's not built for recommendation. Some advantage of using LLM, especially for our POC use case: 
 - We do not need to write a lot of code, around 100 line of code can provide acceptable result based on specific user context (ie their History)
 - We do not have to build and rebuild model everytime we introduce new usecase. When we have new service, just add it to vector database and it works. 
