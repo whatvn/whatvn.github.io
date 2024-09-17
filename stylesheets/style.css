@@ -158,7 +158,14 @@ code, tt, pre, pre > p {
     margin-left: auto;
     margin-right: auto;
     hyphens: auto;
-    max-width: 8in;
+    max-width: 10in;
 }
+
+.ava-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
 
 /* end Markdown styles */
