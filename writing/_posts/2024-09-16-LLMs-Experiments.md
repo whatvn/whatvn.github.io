@@ -11,7 +11,7 @@ Also LLMs which support Vietnamese are not main-stream, they are there but mostl
 
 In this blog post, I will cover my experiment getting 7B model running locally, we then cover how to build application using vLLM, apply RAG, prepare dataset to finetune an LLM model using 2 different approaches. 
 
-On the other hand, in real world application I managed to get Vision language and audio model to run along with LLMs to accomplish more complicated task, but that will not be covered this time. 
+On the other hand, in real world application I managed to get Vision language and audio model to run along with LLMs to accomplish more complicated task, however those will not be covered this time. 
 
 
 1. [Past Experiment](#pass-experiment)
@@ -514,6 +514,9 @@ To build a RAG application, basically we will implement 2 steps:
 - Embedding our latest data into a vector database. In our example, we tokenize our available services and store tokenized data into a database, which later we can search using that database. If you are new into this, this basically building simple search based on semantic instead of regular expression, text similarity, etc. 
 - When building prompt, instead of bundling all data into it, we 1) tokenize user spending history 2) perform a search into vector database to get result 3) use that result as context in prompt query. 
 
+
+> *You may already learn and apply RAG easily through ton of Internet resource, but there's one thing people may not tell you, to get RAG works well, what you really need is a good Tokenizer. Without a good tokenizer, no matter how good is dataset, your context will be very different from user question*
+
 #### 5.2 Re-work our POC 
 As mentioned, we will have to build a vector database to store our available services. To do this, we will need to have an embedding model to tokenize data into vector presentation, in this case I use **all-mpnet-base-v2**, simply because it supports Vietnamese. Code below explains itself 
 
@@ -882,7 +885,7 @@ from transformers.trainer_pt_utils import LabelSmoother
 
 IGNORE_TOKEN_ID = LabelSmoother.ignore_index
 
-TEMPLATE = """{% for message in messages %}{% if loop.first and messages[0]['role'] != 'system' %}{{ '<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n' }}{% endif %}{{'<|im_start|>' + message['role'] + '\n' + message['content']}}{% if loop.last %}{{ '<|im_end|>'}}{% else %}{{ '<|im_end|>\n' }}{% endif %}{% endfor %}"""
+TEMPLATE = "{% for message in messages %}{% if loop.first and messages[0]['role'] != 'system' %}{{ '<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n' }}{% endif %}{{'<|im_start|>' + message['role'] + '\n' + message['content']}}{% if loop.last %}{{ '<|im_end|>'}}{% else %}{{ '<|im_end|>\n' }}{% endif %}{% endfor %}"
 
 local_rank = None
 
