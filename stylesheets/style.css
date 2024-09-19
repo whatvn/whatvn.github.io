@@ -168,4 +168,7 @@ code, tt, pre, pre > p {
     width: 40%;
   }
 
+table, th, td {
+    border: 1px solid;
+}
 /* end Markdown styles */
