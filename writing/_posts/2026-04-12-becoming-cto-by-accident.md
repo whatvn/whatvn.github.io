@@ -29,7 +29,7 @@ What I have slowly learned is that this discomfort is not a sign that I am doing
 
 Introversion makes some of this harder. But I have stopped trying to become someone I am not, and started figuring out how to bring what I naturally do well into a role that did not originally feel like it was built for me. Introverts listen carefully. They think before they speak. They tend to create space for others rather than filling every silence. Those are not weaknesses in leadership, they are just quieter strengths, and quiet can be powerful if you use it intentionally.
 
-While adjusting to all of this, one thing has been shifting so fast it deserves its own honesty: AI is changing software development, and I am not always sure what that means for us specifically.
+While adjusting to all of this, one thing has been shifting so fast that deserves its own story: AI is changing software development, and I am not always sure what that means for us specifically.
 
 I have been building software for over a decade. I have seen waves of hype: big data, blockchain, microservices, serverless. Most of them changed some things. AI feels structurally different. Not because of the demos, but because of what it is actually doing to the constraint that has always defined software development: human time.
 
@@ -37,11 +37,11 @@ The time it takes to go from an idea to a working prototype has collapsed. The c
 
 I believe this genuinely changes what makes a great engineer. Less about holding large systems in your head, less about knowing every API by memory, more about judgment: knowing what to ask, knowing when to trust, knowing what architecture fits the problem. Engineers who learn to use AI to amplify their thinking will pull ahead. That seems clear to me.
 
-What is less clear to me, and I want to be honest about this, is the product side. Every conversation in the industry right now is about AI use cases, AI features, AI integrations. Everyone seems to have a confident answer about what their product should do with AI. I am still working mine out.
+What is less clear to me, is the product side. Every conversation in the industry right now is about AI use cases, AI features, AI integrations. Everyone seems to have a confident answer about what their product should do with AI. I am still working mine out.
 
 I find myself sitting in planning sessions, listening to what competitors are building, reading about what the market expects, and not always arriving at the obvious answer for our specific context. Some of the AI features I see being shipped feel like answers in search of a question. Some feel genuinely transformative. The hard part is telling them apart before you have committed the resources to find out.
 
-This uncertainty is uncomfortable, especially in a role where people expect you to have the vision. But I think it is more honest than pretending confidence I do not have. The strategy will emerge from the work, from staying close to what users actually need, from running small experiments, from being willing to be wrong and adjust quickly.
+This uncertainty is uncomfortable, especially in a role where people expect you to have the vision. I am not really confidence that I clearly have. The strategy will emerge from the work, from staying close to what users actually need, from running small experiments, from being willing to be wrong and adjust quickly.
 
 On a personal level, AI has already changed how I work in ways that feel irreversible.
 
